@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLightGreen"
+    tools:context=".NotificationsActivity">
+
+    <CheckBox
+        android:id="@+id/cbNotificationToggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginSmall"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:text="Želim primati obavijesti"
+        android:textAlignment="textEnd"
+        android:textColor="@color/colorLightBrown"
+        android:textSize="@dimen/fontSizeMedium"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilCity"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/marginSmall"
+        android:hint="@string/stringSelectCityHint"
+        android:textColorHint="@color/colorLightBrown"
+        app:boxBackgroundColor="@color/colorOrangeRed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cbNotificationToggle">
+
+        <AutoCompleteTextView
+            android:id="@+id/acCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorOrangeRed"
+            android:inputType="none"
+            android:padding="@dimen/paddingLarge"
+            android:paddingTop="0dp"
+            android:textColor="@color/colorLightBrown"
+            android:textSize="@dimen/fontSizeMedium" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPlant"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/marginSmall"
+        android:layout_marginTop="40dp"
+        android:hint="@string/stringSelectPlantHint"
+        android:textColorHint="@color/colorLightBrown"
+        app:boxBackgroundColor="@color/colorOrangeRed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tilCity">
+
+        <AutoCompleteTextView
+            android:id="@+id/acPlant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorOrangeRed"
+            android:inputType="none"
+            android:padding="@dimen/paddingLarge"
+            android:paddingTop="0dp"
+            android:textColor="@color/colorLightBrown"
+            android:textSize="@dimen/fontSizeMedium" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

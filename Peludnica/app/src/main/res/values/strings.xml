@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">peLUDNICA</string>
+    <string name="stringTodayLabel">Danas</string>
+    <string name="stringTomorrowLabel">Sutra</string>
+    <string name="stringOvermorrowLabel">Prekosutra</string>
+    <string name="stringSelectCityHint">Odaberite grad</string>
+    <string name="stringSelectPlantHint">Odaberite biljku</string>
+    <string name="stringRefreshLabel">Osvježi</string>
+    <string name="stringInternetDisabledLabel">Internet veza nije dostupna</string>
+</resources>

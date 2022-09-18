@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorLightGreen"
+    android:layout_marginBottom="@dimen/marginSmall"
+    android:padding="@dimen/paddingMedium">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideVerticalHalf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideVerticalRightQuarter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <TextView
+        android:id="@+id/tvPollenName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Naziv peludi"
+        android:textAlignment="center"
+        android:textSize="@dimen/fontSizeLarge"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/colorLightBrown" />
+
+    <View
+        android:id="@+id/horizontal_separator_1"
+        android:layout_width="@dimen/lineLengthLong"
+        android:layout_height="@dimen/lineWidthMedium"
+        android:background="#000"
+        app:layout_constraintTop_toBottomOf="@id/tvPollenName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="@dimen/marginSmall"
+        android:layout_marginRight="@dimen/marginSmall"
+        android:backgroundTint="@color/colorOrangeRed"/>
+    <TextView
+        android:id="@+id/tvTodayLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stringTodayLabel"
+        android:textSize="@dimen/fontSizeMediumLarge"
+        android:textStyle="bold"
+        android:textColor="@color/colorLightBrown"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guideVerticalHalf"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_separator_1" />
+
+    <TextView
+        android:id="@+id/tvTodayDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="29.12.2020"
+        android:textSize="@dimen/fontSizeMediumLarge"
+        android:textStyle="bold"
+        android:textColor="@color/colorLightBrown"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guideVerticalHalf"
+        app:layout_constraintTop_toBottomOf="@id/tvTodayLabel"/>
+
+    <TextView
+        android:id="@+id/tvTodayLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Visoka"
+        android:textSize="@dimen/fontSizeMediumLarge"
+        android:textStyle="bold"
+        android:textColor="@color/colorLightBrown"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guideVerticalHalf"
+        app:layout_constraintTop_toBottomOf="@id/tvTodayDate"/>
+
+    <View
+        android:id="@+id/vertical_separator_1"
+        android:layout_width="@dimen/lineWidthMedium"
+        android:layout_height="@dimen/lineLengthSmall"
+        android:background="#000"
+        app:layout_constraintLeft_toLeftOf="@id/guideVerticalHalf"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_separator_1"
+        app:layout_constraintBottom_toBottomOf="@id/tvTodayLevel"
+        android:backgroundTint="@color/colorOrangeRed"/>
+
+    <View
+        android:id="@+id/horizontal_separator_2"
+        android:layout_width="@dimen/lineLengthMedium"
+        android:layout_height="@dimen/lineWidthMedium"
+        android:background="#000"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_separator_1"
+        app:layout_constraintBottom_toBottomOf="@id/tvTodayLevel"
+        app:layout_constraintLeft_toLeftOf="@id/guideVerticalHalf"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="@dimen/marginSmall"
+        android:layout_marginRight="@dimen/marginSmall"
+        android:backgroundTint="@color/colorOrangeRed"/>
+
+    <TextView
+        android:id="@+id/tvTomorrowLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stringTomorrowLabel"
+        android:textSize="@dimen/fontSizeSmall"
+        android:textStyle="bold"
+        android:textColor="@color/colorLightBrown"
+        app:layout_constraintLeft_toLeftOf="@id/guideVerticalHalf"
+        app:layout_constraintRight_toRightOf="@id/guideVerticalRightQuarter"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_separator_1"
+        app:layout_constraintBottom_toTopOf="@id/horizontal_separator_2"/>
+
+    <TextView
+        android:id="@+id/tvTomorrowDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="30.12.2020."
+        android:textSize="@dimen/fontSizeSmall"
+        android:textStyle="bold"
+        android:textColor="@color/colorLightBrown"
+        app:layout_constraintLeft_toLeftOf="@id/guideVerticalRightQuarter"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_separator_1"
+        app:layout_constraintBottom_toTopOf="@id/tvTomorrowLevel"/>
+
+    <TextView
+        android:id="@+id/tvTomorrowLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Srednja"
+        android:textSize="@dimen/fontSizeSmall"
+        android:textStyle="bold"
+        android:textColor="@color/colorLightBrown"
+        app:layout_constraintLeft_toLeftOf="@id/guideVerticalRightQuarter"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTomorrowDate"
+        app:layout_constraintBottom_toBottomOf="@id/horizontal_separator_2"/>
+
+    <TextView
+        android:id="@+id/tvOvermorrowLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stringOvermorrowLabel"
+        android:textSize="@dimen/fontSizeSmall"
+        android:textStyle="bold"
+        android:textColor="@color/colorLightBrown"
+        app:layout_constraintLeft_toLeftOf="@id/guideVerticalHalf"
+        app:layout_constraintRight_toRightOf="@id/guideVerticalRightQuarter"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_separator_2"
+        app:layout_constraintBottom_toBottomOf="@id/tvTodayLevel"/>
+
+    <TextView
+        android:id="@+id/tvOvermorrowDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="30.12.2020."
+        android:textSize="@dimen/fontSizeSmall"
+        android:textStyle="bold"
+        android:textColor="@color/colorLightBrown"
+        app:layout_constraintLeft_toLeftOf="@id/guideVerticalRightQuarter"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_separator_2"
+        app:layout_constraintBottom_toTopOf="@id/tvOvermorrowLevel"/>
+
+    <TextView
+        android:id="@+id/tvOvermorrowLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Niska"
+        android:textSize="@dimen/fontSizeSmall"
+        android:textStyle="bold"
+        android:textColor="@color/colorLightBrown"
+        app:layout_constraintLeft_toLeftOf="@id/guideVerticalRightQuarter"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvOvermorrowDate"
+        app:layout_constraintBottom_toBottomOf="@id/tvTodayLevel"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
